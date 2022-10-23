@@ -1,0 +1,11 @@
+.MainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //padding: 64px;
+  flex-direction: column;
+  width: auto;
+  //height: auto;
+  overflow-y: hidden;
+  background: #ffffff;
+}

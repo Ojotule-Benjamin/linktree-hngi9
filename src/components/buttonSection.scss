@@ -1,0 +1,23 @@
+.linkSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  //padding: 0px;
+  //gap: 24px;
+  width: 1152px;
+  height: 576px;
+  //order: 1;
+
+  .buttonMain {
+    color: red;
+    .btn {
+      width: 1152px;
+      height: 76px;
+      color: tomato;
+      background: #eaecf0;
+      border: 1px solid #eaecf0;
+      border-radius: 8px;
+    }
+  }
+}
