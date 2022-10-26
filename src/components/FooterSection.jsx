@@ -1,17 +1,21 @@
-import "./footerSection.scss";
-
 import React from "react";
+import "./footerSection.scss";
+import I4G from "../assets/I4G.png";
+import { ZuriInternshipSvg } from "../assets/Icons";
 
-const FooterSection = () => {
+export const FooterSection = () => {
   return (
     <div className="footerContainer">
       <div className="footerWrapper">
-        <h3>zuri logo</h3>
-        <h3>zuri logo</h3>
-        <h3>zuri logo</h3>
+        <ZuriInternshipSvg />
+        <div className="zuriLogo">
+          <img src={I4G} alt="logo" />
+        </div>
+        <div className="">
+          <h5>HNG Internship 9 Frontend Task</h5>
+        </div>
+        <img src={I4G} alt="logo" />
       </div>
     </div>
   );
 };
-
-export default FooterSection;
