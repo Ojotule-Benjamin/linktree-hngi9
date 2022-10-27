@@ -24,11 +24,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    a {
-      text-decoration: none;
-      width: 24px;
-      height: 24px;
-    }
+
     @include md {
       display: flex;
       align-items: center;

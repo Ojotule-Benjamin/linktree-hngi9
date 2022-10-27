@@ -2,7 +2,7 @@ export const Links = [
   {
     id: "twitter",
     name: "Twitter Link",
-    url: "https://www.w3schools.com",
+    url: "https://twitter.com/Rockefellerjr1",
   },
   {
     id: "btn_zuri",
@@ -17,7 +17,7 @@ export const Links = [
   {
     id: "books_python",
     name: "Python books",
-    url: "https://books.zuri.team/python-for-beginners?ref_id=%3Cyourslackname%3E",
+    url: "https://books.zuri.team/python-for-beginners?ref_id=ojotule-benjamin-ajodo",
   },
   {
     id: "pitch",

@@ -1,5 +1,5 @@
 import React from "react";
-import profilePics from "../../src/assets/profilePics.svg";
+import ojotule1 from "../assets/ojotule1.png";
 import { ShareIconSvg, MobileShareIcon } from "../assets/Icons";
 import "./profileSection.scss";
 
@@ -7,8 +7,9 @@ export const ProfileSection = () => {
   return (
     <div className="profileContainer">
       <div className="profileItems">
-        <img src={profilePics} alt="profile" id="profile_img" />
-        <h3>Annette Black</h3>
+        <img src={ojotule1} alt="profile" id="profile_img" />
+        <h3>Ojotule Benjamin Ajodo</h3>
+        {/* <p id="slack">Ojotule Benjamin Ajodo</p> */}
       </div>
       <div className="avatarShare">
         <a
