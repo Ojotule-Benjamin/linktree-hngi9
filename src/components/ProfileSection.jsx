@@ -12,23 +12,11 @@ export const ProfileSection = () => {
         {/* <p id="slack">Ojotule Benjamin Ajodo</p> */}
       </div>
       <div className="avatarShare">
-        <a
-          href="https://github.com/Ojotule-Benjamin"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <ShareIconSvg />
-        </a>
+        <ShareIconSvg />
       </div>
 
       <div className="mobileShareBtn">
-        <a
-          href="https://github.com/Ojotule-Benjamin"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <MobileShareIcon />
-        </a>
+        <MobileShareIcon />
       </div>
     </div>
   );
