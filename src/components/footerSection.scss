@@ -1,13 +1,85 @@
+@import "../scss/breakpoints";
+
 .footerContainer {
-  width: 100%;
-  height: 160px;
   display: flex;
+  //flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: auto;
+  background: #ffffff;
 
-  background-color: red;
-  //background: #ffffff;
+  @include md {
+    width: auto;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //background: #ffffff;
+  }
 
   .footerWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 0px 0px;
+    gap: 16px;
+    width: 90%;
+    height: 132px;
+    border-top: 1px solid #eaecf0;
+
+    @include md {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 80%;
+      height: 64px;
+      box-sizing: border-box;
+      border-top: 1px solid #eaecf0;
+      margin: 0 10px 0 10px;
+    }
+
+    .zuriLogo {
+      // width: 140.69px;
+      // height: 24px;
+      margin: 0;
+
+      @include md {
+        margin: 0;
+      }
+    }
+    .footerText {
+      margin: 0;
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+
+      @include md {
+        h4 {
+          margin: 0;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          text-align: center;
+          color: #667085;
+        }
+      }
+    }
+    .I4Glogo {
+      // width: 99.1px;
+      // height: 24px;
+
+      @include md {
+        width: 132.13px;
+        height: 32px;
+        margin: 0;
+      }
+    }
   }
 }

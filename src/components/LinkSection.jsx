@@ -8,7 +8,7 @@ export const linkSection = () => {
       {Links.map((d, key) => (
         <div className="linkItems" key={key}>
           <a href={d.url} target="_blank" rel="noreferrer">
-            <button id={d.id}>{d.name}</button>
+            {d.name}
           </a>
         </div>
       ))}

@@ -1,6 +1,6 @@
 import React from "react";
 import profilePics from "../../src/assets/profilePics.svg";
-import { ShareIconSvg } from "../assets/Icons";
+import { ShareIconSvg, MobileShareIcon } from "../assets/Icons";
 import "./profileSection.scss";
 
 export const ProfileSection = () => {
@@ -11,7 +11,23 @@ export const ProfileSection = () => {
         <h3>Annette Black</h3>
       </div>
       <div className="avatarShare">
-        <ShareIconSvg />
+        <a
+          href="https://github.com/Ojotule-Benjamin"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <ShareIconSvg />
+        </a>
+      </div>
+
+      <div className="mobileShareBtn">
+        <a
+          href="https://github.com/Ojotule-Benjamin"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <MobileShareIcon />
+        </a>
       </div>
     </div>
   );

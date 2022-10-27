@@ -1,19 +1,41 @@
+@import "../scss/breakpoints";
+
 .socialContainer {
-  width: 1216px;
-  height: 72px;
-  margin: 20px auto 30px auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 64px;
+  width: 100%;
+  height: 72px;
 
-  .socialItems {
+  @include md {
+    width: 90%;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: center;
-    //padding: 0px 32px;
-    gap: 32px;
-    width: 100%;
+    margin: 10px auto 0 auto;
+    gap: 64px;
+  }
+  .socialItems {
+    gap: 24px;
+    width: 80%;
     height: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    a {
+      text-decoration: none;
+      width: 24px;
+      height: 24px;
+    }
+    @include md {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      width: 100%;
+      height: 24px;
+    }
   }
 }
