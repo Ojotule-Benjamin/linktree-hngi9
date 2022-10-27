@@ -9,7 +9,7 @@ export const ProfileSection = () => {
       <div className="profileItems">
         <img src={ojotule1} alt="profile" id="profile_img" />
         <h3>Ojotule Benjamin Ajodo</h3>
-        {/* <p id="slack">Ojotule Benjamin Ajodo</p> */}
+        <p id="slack">Split</p>
       </div>
       <div className="avatarShare">
         <ShareIconSvg />
