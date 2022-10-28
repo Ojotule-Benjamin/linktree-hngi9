@@ -17,7 +17,7 @@ export const Links = [
   {
     id: "books__python",
     name: "Python books",
-    url: "https://books.zuri.team/python-for-beginners?ref_id=ojotule-benjamin-ajodo",
+    url: "https://books.zuri.team/python-for-beginners?ref_id=Split",
   },
   {
     id: "pitch",
