@@ -5,7 +5,7 @@ export const Links = [
     url: "https://twitter.com/Rockefellerjr1",
   },
   {
-    id: "btn_zuri",
+    id: "btn__zuri",
     name: "Zuri Team",
     url: "https://training.zuri.team/",
   },
@@ -15,7 +15,7 @@ export const Links = [
     url: "https://books.zuri.team/",
   },
   {
-    id: "books_python",
+    id: "books__python",
     name: "Python books",
     url: "https://books.zuri.team/python-for-beginners?ref_id=ojotule-benjamin-ajodo",
   },
@@ -25,7 +25,7 @@ export const Links = [
     url: "https://background.zuri.team/",
   },
   {
-    id: "book-design",
+    id: "book__design",
     name: "Design Books",
     url: "https://books.zuri.team/design-rules",
   },

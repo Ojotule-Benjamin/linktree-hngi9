@@ -7,7 +7,7 @@ export const ProfileSection = () => {
   return (
     <div className="profileContainer">
       <div className="profileItems">
-        <img src={ojotule1} alt="profile" id="profile_img" />
+        <img src={ojotule1} alt="profile" id="profile__img" />
         <h3>Ojotule Benjamin Ajodo</h3>
         <p id="slack">Split</p>
       </div>
