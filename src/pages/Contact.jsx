@@ -1,14 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FooterSection } from "../components/FooterSection";
 import "../pages/contact.scss";
 
 const Contact = () => {
   const name = "Ojotule Benjamin Ajodo";
-  const [message, setMessage] = useState(false);
 
+  //setting state for the initial values, formvalues, errors, submit
+  const initialValues = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  };
+
+  const [formValues, setFormValues] = useState(initialValues);
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
+
+  //handle the changes in the input field
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value }); //[name] is the key
+    console.log(formValues);
+  };
+
+  //handle the submit
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessage(true);
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
+  };
+
+  useEffect(() => {
+    console.log(formErrors);
+    if (Object.keys(formErrors).length === 0 && isSubmit) {
+      console.log(formValues);
+    }
+  }, [formErrors, formValues, isSubmit]); //added the formvalues, isSubmit *look into this
+
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (!values.firstName) {
+      errors.firstName = "First name is required";
+    } else if (!regex.test(values.email)) {
+      errors.email = "This is not a valid email format";
+    } else if (!values.lastName) {
+      errors.lastName = "Last name is required";
+    } else if (!values.message) {
+      errors.message = "Please enter a message";
+    }
+    return errors;
   };
 
   return (
@@ -20,6 +63,7 @@ const Contact = () => {
           <p>Hi there, contact me to ask me about anything you have in mind.</p>
         </header>
 
+        {/* <pre>{JSON.stringify(formValues, undefined, 2)}</pre> */}
         {/* Form data*/}
         <form onSubmit={handleSubmit}>
           <section className="nameRow">
@@ -28,9 +72,10 @@ const Contact = () => {
               <input
                 type="text"
                 id="first_name"
-                name=""
+                name="firstName"
                 placeholder="Enter your first name"
-                required
+                value={formValues.firstName}
+                onChange={handleChange}
               />
             </div>
 
@@ -39,9 +84,10 @@ const Contact = () => {
               <input
                 type="text"
                 id="last_name"
-                name=""
+                name="lastName"
                 placeholder="Enter your last name"
-                required
+                value={formValues.lastName}
+                onChange={handleChange}
               />
             </div>
           </section>
@@ -52,11 +98,12 @@ const Contact = () => {
             </label>
             <input
               type="email"
-              id=""
-              name=""
+              id="email"
+              name="email"
               placeholder="yourname@email.com"
               className="inputField"
-              required
+              value={formValues.email}
+              onChange={handleChange}
             />
           </section>
 
@@ -66,21 +113,22 @@ const Contact = () => {
             </label>
             <textarea
               id="message"
-              name=""
+              name="message"
+              value={formValues.message}
+              onChange={handleChange}
               placeholder="Send me a message and I'll reply you as soon as possible..."
             ></textarea>
+            <p>{formErrors.message}</p>
           </section>
 
           <section className="checkboxField">
-            <input type="checkbox" id="" name="" required />
+            <input type="checkbox" id="check_box" required />
             <label htmlFor="">
               You agree to providing your data to {name} who may contact you
             </label>
           </section>
-          {message && <span>Please enter a message</span>}
+          <button id="btn__submit">Send message</button>
         </form>
-
-        <button id="btn__submit">Send message</button>
       </div>
 
       <FooterSection />
