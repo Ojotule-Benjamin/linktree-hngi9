@@ -21,7 +21,7 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value }); //[name] is the key
-    console.log(formValues);
+    //console.log(formValues);
   };
 
   //handle the submit
