@@ -41,25 +41,3 @@ $breakpoints: (
     @content;
   }
 }
-
-// .socialContainer {
-//   @include xs {
-//     background-color: red;
-//   }
-//   @include sm {
-//     background-color: blue;
-//   }
-//   @include md {
-//     background-color: green;
-//   }
-//   @include lg {
-//     background-color: purple;
-//   }
-//   @include xl {
-//     background-color: crimson;
-//   }
-
-//   @include breakpoint(1400px) {
-//     background-color: orange;
-//   }
-// }
